@@ -1,0 +1,448 @@
+ /* HTML5 Boilerplate  */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+html, button, input, select, textarea { font-family: sans-serif; color: #222; }
+body { margin: 0; font-size: 1em; line-height: 1.4; }
+
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+
+a { color: #333; }
+a:hover { color: #000; }
+a:focus { outline: thin dotted; }
+a:hover, a:active { outline: 0; text-decoration: none;}
+abbr[title] { border-bottom: 1px dotted; }
+b, strong { font-weight: bold; }
+blockquote { margin: 1em 40px; }
+dfn { font-style: italic; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+ins { background: #ff9; color: #000; text-decoration: none; }
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+pre, code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+small { font-size: 85%; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+ul, ol {  }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+svg:not(:root) { overflow: hidden; }
+figure { margin: 0; }
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+
+label { cursor: pointer; }
+legend { border: 0; *margin-left: -7px; padding: 0; white-space: normal; }
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+button, input { line-height: normal; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible; }
+button[disabled], input[disabled] { cursor: default; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; *width: 13px; *height: 13px; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+.chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; text-align: center; }
+
+.b-ib {
+	display:-moz-inline-stack;
+	display:inline-block;
+	_overflow:hidden;
+	*zoom:1;
+	*display:inline;
+	vertical-align: top;
+}
+
+h3 {
+	font-weight: normal;
+	color: #B0B3B5;
+}
+/* Copyright Internet-Expert LLC */
+
+body {
+
+}
+
+.b-body__bg {
+	position: absolute; 
+	top: 0px; 
+	right: -200px;
+}
+
+.b-body {
+	font-family: 'Ubuntu', sans-serif;
+	color: #333;
+}
+
+.b-wrapper {
+	padding: 30px 0 0 180px;
+	width: 1024px;
+	position: relative;
+}
+
+
+.b-header {
+	margin: 0 0 30px 0;
+}
+
+.b-header__logo {
+	font-size: 40px;
+	text-decoration: none;
+	color: #333;
+	margin: 0 0 0 45px;
+	line-height: 36px;
+}
+
+.b-header-contacts {
+	display:-moz-inline-stack;
+	display:inline-block;
+	_overflow:hidden;
+	*zoom:1;
+	*display:inline;
+	vertical-align: top;
+	font-size: 17px;
+}
+
+
+.b-header-contacts__block {
+	padding: 0 35px;
+	border-left: 1px solid #333;
+	display:-moz-inline-stack;
+	display:inline-block;
+	_overflow:hidden;
+	*zoom:1;
+	*display:inline;
+	vertical-align: top;
+}
+
+.b-header-contacts__first {
+	margin: 0 0 0 50px;
+	border-left: none;
+}
+
+.b-header-contacts__link {
+	text-decoration: none;
+}
+
+
+.b-nav {
+	height: 47px;
+	background: #CCCECF;
+}
+
+.b-nav-list {
+	list-style-type: 0;
+	font-size: 0;
+	line-height: 0;
+	padding: 0;
+}
+
+.b-nav-list__item {
+	display:-moz-inline-stack;
+	display:inline-block;
+	_overflow:hidden;
+	*zoom:1;
+	*display:inline;
+	vertical-align: top;
+}
+
+.b-nav-list__link {
+	line-height: 47px;
+	padding: 0 0 0 50px;
+	font-size: 22px;
+	text-decoration: none;
+}
+
+.b-nav-list__link:hover {
+	color: #fff;
+}
+
+.b-nav-list__current {
+	color: #fff;
+}
+
+.b-action {
+	vertical-align: top;
+	display:inline-block;
+	_overflow:hidden;
+	*zoom:1;
+	*display:inline;
+	background: #e0e3e4;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2UwZTNlNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(left,  #e0e3e4 0%, #ffffff 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#e0e3e4), color-stop(100%,#ffffff));
+	background: -webkit-linear-gradient(left,  #e0e3e4 0%,#ffffff 100%);
+	background: -o-linear-gradient(left,  #e0e3e4 0%,#ffffff 100%);
+	background: -ms-linear-gradient(left,  #e0e3e4 0%,#ffffff 100%);
+	background: linear-gradient(to right,  #e0e3e4 0%,#ffffff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e3e4', endColorstr='#ffffff',GradientType=1 );
+	padding: 25px 0 0 61px;
+	width: 963px;
+}
+
+#slides {
+	height: 190px;
+	position: relative;
+	overflow: hidden;
+	width: 700px;
+}
+
+#slides .slide {
+	position: absolute;
+	padding: 0 0 0 60px;
+}
+
+#slides .slide:before {
+	content: ">";
+	font-size: 68px;
+	position: absolute;
+	left: 0px;
+	top: -18px;
+}
+
+
+.b-slidebutton {
+    width: 8px;
+	height: 8px;
+	border-radius: 4px;
+	background: #CCCECF;
+	margin-right: 12px;
+	display:inline-block;
+	_overflow:hidden;
+	*zoom:1;
+	*display:inline;
+}
+
+.b-action-bottom .activ {
+	background: #333;
+}
+
+.b-action-bottom  {
+		padding: 22px 0 26px 63px;
+}
+
+
+.b-quote {
+	background: #e0e3e4;
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2UwZTNlNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(left,  #e0e3e4 0%, #ffffff 100%);
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#e0e3e4), color-stop(100%,#ffffff));
+background: -webkit-linear-gradient(left,  #e0e3e4 0%,#ffffff 100%);
+background: -o-linear-gradient(left,  #e0e3e4 0%,#ffffff 100%);
+background: -ms-linear-gradient(left,  #e0e3e4 0%,#ffffff 100%);
+background: linear-gradient(to right,  #e0e3e4 0%,#ffffff 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e3e4', endColorstr='#ffffff',GradientType=1 );
+
+}
+
+.b-quote-list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	padding: 25px 0 0 61px;
+}
+
+
+
+.b-quote-list__item {
+	padding: 0 0 0 60px;
+	position: relative;
+	height: 188px;
+	overflow: hidden;
+	width: 700px;
+}
+
+.b-quote-list__link {
+	font-size: 45px;
+	color: #333;
+	text-decoration: none;
+}
+
+.b-quote-list__item:before {
+	content: ">";
+	font-size: 68px;
+	position: absolute;
+	left: 0px;
+	top: -18px;
+}
+
+.b-buts-list {
+	font-size: 0;
+	line-height: 0;
+	margin: 0;
+	list-style-type: 0;
+	padding: 22px 0 26px 125px;
+}
+
+.b-buts-list__item {
+	display:-moz-inline-stack;
+	display:inline-block;
+	_overflow:hidden;
+	*zoom:1;
+	*display:inline;
+	vertical-align: top;
+	margin: 0 20px 0 0;
+}
+
+.b-buts-list__link {
+	width: 8px;
+	height: 8px;
+	border-radius: 4px;
+	background: #CCCECF;
+	display: block;
+}
+
+.b-buts-list__current {
+	background: #333;
+}
+
+.b-content {
+	font-size: 0;
+	line-height: 0;
+	background: #F0F2F2;
+	margin: 0 0 40px 0;
+}
+
+
+
+.b-menu {
+	font-size: 25px;
+	line-height: 28px;
+	display:-moz-inline-stack;
+	display:inline-block;
+	_overflow:hidden;
+	*zoom:1;
+	*display:inline;
+	vertical-align: top;
+	width: 250px;
+}
+
+.b-menu-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.b-menu-list__item {
+	margin: 0 0 1px 0;
+	
+}
+
+.b-menu-list__link {
+	display: block;
+	padding: 25px 0 25px 25px;
+	background: #E1E3E4;
+	color: #333;
+	text-decoration: none;
+}
+
+.b-menu-list__current {
+	background: #B0B3B5;
+	color: #fff;
+}
+
+.ui-tabs { position: relative; zoom: 1; } /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a { cursor: text; }
+.ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; } /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+.ui-tabs .ui-tabs-hide { display: none !important; }
+
+.ui-tabs-selected .b-menu-list__link {
+	background: #B0B3B5;
+	color: #fff;
+}
+
+.ui-state-hover {
+	color: #000;
+}
+
+
+.b-main {
+	font-size: 17px;
+	line-height: 20px;
+	display:-moz-inline-stack;
+	display:inline-block;
+	_overflow:hidden;
+	*zoom:1;
+	*display:inline;
+	vertical-align: top;
+	padding: 47px 0 20px 50px;
+}
+
+.b-quest-list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.b-quest-list__item {
+	margin: 0 0 20px 0;
+}
+
+.b-quest-list__item h3 {
+	padding-left: 10px;
+	position: relative;
+	margin: 0 0 3px 0;;
+} 
+
+.b-quest-list__item h3:before {
+	content: "-";
+	position: absolute;
+	left: 0;
+} 
+
+.b-quest-list__answ {
+	color: #333;
+	padding-left: 10px;
+}
+
+
+
+@media only screen and (min-width: 35em) {
+  
+
+}
+
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
+.ir br { display: none; }
+.hidden { display: none !important; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+@media print {
+  * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } 
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; } 
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } 
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
+

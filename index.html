@@ -1,0 +1,248 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title><?php // $kernel->show_title(); ?></title>
+<meta name="description" content="<?php // $kernel->show_description(); ?>">
+<meta name="keywords" content="<?php // $kernel->show_keywords(); ?>">
+<meta name="author" content="Веб-студия Интернет-Эксперт">
+
+<meta name="viewport" content="width=device-width">
+
+<script src="http://st.iex.su/modernizr.js"></script>
+<script src="http://st.iex.su/jquery.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=Ubuntu&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+<!--<script type="text/javascript" src="init.js"></script>-->
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<script>
+$(function () {
+    var timer, timeout = 3000;
+    var elements = $('#slides div'), Gallery = function () {
+        var slides = $('#slides');
+	    
+	    var current = slides.find('div.show');
+	    if (!current.length) {
+	        current = slides.find('div:first');
+	    }
+	    
+	    var next = current.next();
+	    if (!next.length) {
+	        next = slides.find('div:first');
+	    }
+	    
+	    $('.b-slidebutton').removeClass('activ');
+	    $('a[data-slidebutton='+next.data('slide')+']').addClass('activ');
+	    next.hide().addClass('show').fadeIn(1000);
+	    current.fadeOut(1000).removeClass('show');
+    }, InitSlider = function () {
+        elements.hide();
+        $('#slides div:first').show();
+		$('#slide_button_1').addClass('activ');
+		$('.b-slidebutton').click(function () {
+		    StopSlider();
+		    SetSlide($(this).data('slidebutton'));
+		    StartSlider();
+		})
+    }, StopSlider = function () {
+        clearInterval(timer);
+    }, StartSlider = function () {
+        timer = setInterval(function () {
+		    Gallery();
+		}, timeout);
+    }, SetSlide = function (number) {
+        var current = $('#slides div.show');
+        if (current.data('slide') != number) {
+            current.removeClass('show');
+            current.fadeOut(1000);
+            $('.b-slidebutton').removeClass('activ');
+            $('a[data-slidebutton='+number+']').addClass('activ');
+            $('div[data-slide='+number+']').fadeIn(1000).addClass('show');
+        }
+    };
+    
+    if (elements.length > 1) {
+        InitSlider();
+        StartSlider();
+    }
+});
+
+</script>
+
+	<script src="http://jqueryui.com/ui/jquery.ui.widget.js"></script>
+	<script src="http://jqueryui.com/ui/jquery.ui.tabs.js"></script>
+	
+
+
+<!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
+<![endif]-->
+
+<script>
+	$(function() {
+		$( "#tabs" ).tabs();
+	});
+	</script>
+
+</head>
+<body>
+ <!--[if lt IE 8]><p class=chromeframe>Ваш браузер <em>устарел!</em> <a href="http://browsers.yandex.ru/">Обновите свой браузер</a> или <a href="http://www.google.com/chromeframe/?redirect=true">установите Google Chrome Frame</a> чтобы продолжить работу с сайтом.</p><![endif]-->
+ 
+<div class="b-body">
+
+<div class="b-wrapper">
+	<div class="b-header">
+		<a href="/" class="b-header__logo">Svetkinz.ru</a>
+		<div class="b-header-contacts">
+			<div class="b-header-contacts__block b-header-contacts__first">
+				<a  href="mailto:milane_s@mail.ru" class="b-header-contacts__link">milane_s@mail.ru</a><br />
+				8-926-247-45-18
+			</div>
+			<div class="b-header-contacts__block">
+				twitter: svetkinz<br />
+				icq: 239357025
+			</div>
+		</div>
+	</div>
+	<div class="b-nav">
+		<ul class="b-nav-list">
+			<li class="b-nav-list__item"><a href="#" class="b-nav-list__link b-nav-list__current">Общая информация</a></li>
+			<li class="b-nav-list__item"><a href="#" class="b-nav-list__link">Опыт разработки</a></li>
+		</ul>
+	</div>
+	
+	
+	<div class="b-action">			
+        <div id="slides">
+            <div class="slide b-action-sl1 show" data-slide="1" id="b-slide_1">
+                <a href="#" class="b-quote-list__link">В 2008 году, учась в институте, вошла в штат разработчиков веб-студии...
+				</a>
+            </div>
+            <div class="slide b-action-sl2" data-slide="2" id="b-slide_2">
+				<a href="#" class="b-quote-list__link">Цитата 2
+				</a>
+            </div>
+             
+        </div>
+            <div class="b-action-bottom">
+                <a class="b-slidebutton activ" data-slidebutton="1" href="#"></a><a class="b-slidebutton" data-slidebutton="2" href="#"></a></div>      
+    </div>
+	
+	<!--
+	<div class="b-quote">
+		<ul class="b-quote-list">
+			<li class="b-quote-list__item">
+				<a href="#" class="b-quote-list__link">В 2008 году, учась в институте, вошла в штат разработчиков веб-студии...
+				</a>
+			</li>
+			<li class="b-quote-list__item" style="display: none;">
+				<a href="#" class="b-quote-list__link">Цитата 2
+				</a>
+			</li>
+		</ul>
+		<ul class="b-buts-list">
+			<li class="b-buts-list__item"><a href="#" class="b-buts-list__link b-buts-list__current"></a></li>
+			<li class="b-buts-list__item"><a href="#" class="b-buts-list__link"></a></li>
+		</ul>	
+	</div>-->
+
+	<div class="b-content">
+<div id="tabs"><div class="b-menu">
+	<ul class="b-menu-list">
+		<li class="b-menu-list__item"><a href="#tabs-1" class="b-menu-list__link">Личные данные</a></li>
+		<li class="b-menu-list__item"><a href="#tabs-2" class="b-menu-list__link">Обучение</a></li>
+		<li class="b-menu-list__item"><a href="#tabs-3" class="b-menu-list__link">О школе РИ</a></li>
+		<li class="b-menu-list__item"><a href="#tabs-4" class="b-menu-list__link">Стажировка</a></li>
+	</ul></div><div class="b-main">
+	<div id="tabs-1">
+		<ul class="b-quest-list">
+				<li class="b-quest-list__item">
+					<h3>Фамилия, имя, отчество</h3>
+					<span class="b-quest-list__answ">Лукьянчук Светлана Васильевна	</span>
+				</li>
+				<li class="b-quest-list__item">
+					<h3>Е-mail	</h3>
+					<span class="b-quest-list__answ">milane_s@mail.ru</span>
+				</li>
+				<li class="b-quest-list__item">
+					<h3>Телефон</h3>
+					<span class="b-quest-list__answ">8-926-247-45-18	</span>
+				</li>
+				<li class="b-quest-list__item">
+					<h3>Год рождения</h3>
+					<span class="b-quest-list__answ">1988	</span>
+				</li>
+				<li class="b-quest-list__item">
+					<h3>Город, в котором живёте</h3>
+					<span class="b-quest-list__answ">Сергиев Посад/Москва</span>
+				</li>
+		</ul>
+	</div>
+	<div id="tabs-2">
+		Ответы 2
+	</div>
+	<div id="tabs-3">
+		Ответы 3
+	</div>
+	<div id="tabs-4">
+		Ответы 4
+	</div></div>
+</div>
+</div>
+
+	<!--<div class="b-content">
+		<div class="b-menu">
+			<ul class="b-menu-list">
+				<li class="b-menu-list__item"><a href="#" class="b-menu-list__link b-menu-list__current">Личные данные</a></li>
+				<li class="b-menu-list__item"><a href="#" class="b-menu-list__link">Обучение</a></li>
+				<li class="b-menu-list__item"><a href="#" class="b-menu-list__link">О школе РИ</a></li>
+				<li class="b-menu-list__item"><a href="#" class="b-menu-list__link">Стажировка</a></li>
+			</ul>
+		</div>
+		<div class="b-main">
+			<ul class="b-quest-list">
+				<li class="b-quest-list__item">
+					<h3>Фамилия, имя, отчество</h3>
+					<span class="b-quest-list__answ">Лукьянчук Светлана Васильевна	</span>
+				</li>
+				<li class="b-quest-list__item">
+					<h3>Е-mail	</h3>
+					<span class="b-quest-list__answ"">milane_s@mail.ru</span>
+				</li>
+				<li class="b-quest-list__item">
+					<h3>Телефон</h3>
+					<span class="b-quest-list__answ"">8-926-247-45-18	</span>
+				</li>
+				<li class="b-quest-list__item">
+					<h3>Год рождения</h3>
+					<span class="b-quest-list__answ"">1988	</span>
+				</li>
+				<li class="b-quest-list__item">
+					<h3>Город, в котором живёте</h3>
+					<span class="b-quest-list__answ"">Сергиев Посад/Москва</span>
+				</li>
+			</ul>
+		</div>-->
+		<img src="b-body__bg_2.png" alt="Я" class="b-body__bg"/>
+	</div>
+</div>
+
+
+ 
+ 
+
+
+
+</body>
+</html>
