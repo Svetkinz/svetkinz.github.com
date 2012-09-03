@@ -1,0 +1,329 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
+<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Анкета для школы разработки интерфейсов</title>
+<meta name="description" content="Анкета для школы разработки интерфейсов">
+<meta name="keywords" content="анкета, школа разработки интерфейсов">
+<meta name="author" content="Лукьянчук С.В.">
+
+<meta name="viewport" content="width=device-width">
+
+<script src="js/jquery.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=Ubuntu&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+<!--<script type="text/javascript" src="init.js"></script>-->
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script src="js/jquery.ui.widget.js"></script>
+<script src="js/jquery.ui.tabs.js"></script>
+	
+<script>
+$(function () {
+    var timer, timeout = 4500;
+    var elements = $('#slides div'), Gallery = function () {
+        var slides = $('#slides');
+	    
+	    var current = slides.find('div.show');
+	    if (!current.length) {
+	        current = slides.find('div:first');
+	    }
+	    
+	    var next = current.next();
+	    if (!next.length) {
+	        next = slides.find('div:first');
+	    }
+	    
+	    $('.b-slidebutton').removeClass('activ');
+	    $('a[data-slidebutton='+next.data('slide')+']').addClass('activ');
+	    next.hide().addClass('show').fadeIn(1000);
+	    current.fadeOut(1000).removeClass('show');
+    }, InitSlider = function () {
+        elements.hide();
+        $('#slides div:first').show();
+		$('#slide_button_1').addClass('activ');
+		$('.b-slidebutton').click(function () {
+		    StopSlider();
+		    SetSlide($(this).data('slidebutton'));
+		    StartSlider();
+		})
+    }, StopSlider = function () {
+        clearInterval(timer);
+    }, StartSlider = function () {
+        timer = setInterval(function () {
+		    Gallery();
+		}, timeout);
+    }, SetSlide = function (number) {
+        var current = $('#slides div.show');
+        if (current.data('slide') != number) {
+            current.removeClass('show');
+            current.fadeOut(1000);
+            $('.b-slidebutton').removeClass('activ');
+            $('a[data-slidebutton='+number+']').addClass('activ');
+            $('div[data-slide='+number+']').fadeIn(1000).addClass('show');
+        }
+    };
+    
+    if (elements.length > 1) {
+        InitSlider();
+        StartSlider();
+    }
+});
+
+</script>
+
+<script>
+	$(function() {
+		$( "#tabs" ).tabs();
+	});
+	</script>
+
+</head>
+
+<body>
+ <!--[if lt IE 8]><p class=chromeframe>Ваш браузер <em>устарел!</em> <a href="http://browsers.yandex.ru/">Обновите свой браузер</a> или <a href="http://www.google.com/chromeframe/?redirect=true">установите Google Chrome Frame</a> чтобы продолжить работу с сайтом.</p><![endif]-->
+ 
+<div class="b-body">
+
+<div class="b-wrapper">
+	<div class="b-header">
+		<a href="/" class="b-header__logo">Svetkinz.ru</a>
+		<div class="b-header-contacts">
+			<div class="b-header-contacts__block b-header-contacts__first">
+				<a  href="mailto:milane_s@mail.ru" class="b-header-contacts__link">milane_s@mail.ru</a><br />
+				8-926-247-45-18
+			</div>
+			<div class="b-header-contacts__block">
+				twitter: svetkinz<br />
+				icq: 239357025
+			</div>
+		</div>
+	</div>
+	<div class="b-nav">
+		<ul class="b-nav-list">
+			<li class="b-nav-list__item"><a href="index.html" class="b-nav-list__link">Общая информация</a></li>
+			<li class="b-nav-list__item"><a href="job.html" class="b-nav-list__link b-nav-list__current">Опыт разработки</a></li>
+		</ul>
+	</div>
+	
+	
+	<div class="b-action">			
+        <div id="slides">
+            <div class="slide b-action-sl1 show" data-slide="1" id="b-slide_1">
+                <a href="#" class="b-quote-list__link">В 2008 году, учась в институте, вошла в штат разработчиков веб-студии...
+				</a>
+            </div>
+            <div class="slide b-action-sl2" data-slide="2" id="b-slide_2">
+				<a href="#" class="b-quote-list__link">Посмотреть, как происходит разработка под-проектов и взорвать себе мозг :)
+				</a>
+            </div>
+			<div class="slide b-action-sl3" data-slide="3" id="b-slide_3">
+				<a href="#" class="b-quote-list__link">Сайт работал, претензий со стороны работодателя не было...
+				</a>
+            </div>
+			<div class="slide b-action-sl4" data-slide="4" id="b-slide_4">
+				<a href="#" class="b-quote-list__link">Со всем этим я сталкиваюсь каждый день.
+				</a>
+            </div>
+			<div class="slide b-action-sl5" data-slide="5" id="b-slide_5">
+				<a href="#" class="b-quote-list__link">... поэтому имею представление о консольных командах.
+				</a>
+            </div>
+             
+        </div>
+            <div class="b-action-bottom">
+                <a class="b-slidebutton activ" data-slidebutton="1" href="#"></a><a class="b-slidebutton" data-slidebutton="2" href="#"></a><a class="b-slidebutton" data-slidebutton="3" href="#"></a><a class="b-slidebutton" data-slidebutton="4" href="#"></a><a class="b-slidebutton" data-slidebutton="5" href="#"></a></div>      
+    </div>
+	
+	<!--
+	<div class="b-quote">
+		<ul class="b-quote-list">
+			<li class="b-quote-list__item">
+				<a href="#" class="b-quote-list__link">В 2008 году, учась в институте, вошла в штат разработчиков веб-студии...
+				</a>
+			</li>
+			<li class="b-quote-list__item" style="display: none;">
+				<a href="#" class="b-quote-list__link">Цитата 2
+				</a>
+			</li>
+		</ul>
+		<ul class="b-buts-list">
+			<li class="b-buts-list__item"><a href="#" class="b-buts-list__link b-buts-list__current"></a></li>
+			<li class="b-buts-list__item"><a href="#" class="b-buts-list__link"></a></li>
+		</ul>	
+	</div>-->
+
+	<div class="b-content">
+<div id="tabs"><div class="b-menu">
+	<ul class="b-menu-list">
+		<li class="b-menu-list__item"><a href="#tabs-1" class="b-menu-list__link">Опыт</a></li>
+		<li class="b-menu-list__item"><a href="#tabs-2" class="b-menu-list__link">Языки</a></li>
+		<li class="b-menu-list__item"><a href="#tabs-3" class="b-menu-list__link">Редакторы</a></li>
+		<li class="b-menu-list__item"><a href="#tabs-4" class="b-menu-list__link">OS/VCS </a></li>
+		<li class="b-menu-list__item"><a href="#tabs-5" class="b-menu-list__link">Ведение проекта</a></li>
+		<li class="b-menu-list__item"><a href="#tabs-6" class="b-menu-list__link">Ресурсы</a></li>
+		<li class="b-menu-list__item"><a href="#tabs-7" class="b-menu-list__link">Работа </a></li>
+	</ul></div><div class="b-main">
+	<div id="tabs-1">
+		<ul class="b-quest-list">
+				<li class="b-quest-list__item">
+					<h3>Расскажите нам о вашем опыте разработки... </h3>
+					<span class="b-quest-list__answ">
+					В 2004 году (в школе) решила подработать, взяла в качестве фрилансера верстку и наполнение сайта СП-Окна (к сожалению, до сегодняшнего дня сайт не дожил). Но выглядело это как-то <a href="http://www.internet-expert.ru/portfolio/spokna/">так</a>.<br />
+В то время я не знала о существовании CMS, странички верстала статично и отдавала студии. Сайт работал, претензий со стороны работодателя по поводу качества работы не было.<br />
+В 2008 году, учась в институте, вошла в штат разработчиков <a href="http://www.internet-expert.ru/">веб-студии</a>. Здесь я впервые столкнулась с CMS – HostCMS, XML и XSL. Тут я и поняла – это мое! Один из первых <a href="http://www.leskom-1.ru/">сайтов</a>.<br />
+Тут же познакомилась с PHP-фреймфорком CakePHP. Мощный фрейм, на котором при участии других программистов был разработан сайт <a href="http://www.gorshki.name">Глиняные горшки</a> (все тот же 2008). Это начало «карьеры».<br />
+А дальше пошло-поехало, практически в каждом проекте, указанном в <a href="http://www.internet-expert.ru/portfolio/">портфолио веб-студии</a>, я принимала участие. Какие-то проекты были полностью разработаны мной, в каких-то выступала только верстальщиком или программистом.<br />
+Из последнего:<br />
+<a href="http://www.solba.ru">Solba.ru</a> – верстка макетов, интеграция с HostCMS (php), верстка xsl-шаблонов.<br />
+<a href="http://www.wifimag.ru">Wifimag.ru</a> – верстка макетов, верстка шаблонов блоков на 1С-Битрикс (PHP). 
+
+					</span>
+				</li>
+				
+		</ul>
+	</div>
+	<div id="tabs-2">
+		<ul class="b-quest-list">
+				<li class="b-quest-list__item">
+					<h3>Какие языки программирования, фреймворки и технологии вы использовали?</h3>
+					<span class="b-quest-list__answ">Языки – PHP, JavaScript, XSLT, HTML, CSS.<br />
+Фреймворки – jQuery, CakePHP, и сейчас осваиваю методологию БЭМ.<br />
+Со всем этим я работаю каждый день (это к вопросу о предпочтениях).
+</span>
+				</li>
+						
+		</ul>
+		
+	</div>
+	<div id="tabs-3">
+		<ul class="b-quest-list">
+				<li class="b-quest-list__item">
+					<h3>Какие редакторы и среды разработки вы использовали? Чем обычно пользуетесь?</h3>
+					<span class="b-quest-list__answ">Прошла через Dreamweaver (мощная, но  тяжелая). Были различные пробы в других программах, была Comodo, но т.к. платная, проблемы с ключами – отказалась. И уже давно остановилась на NotePad++.
+<br />И огромное спасибо FireBug, это то, что жизненно необходимо для отладки!
+</span>
+				</li>
+			
+		</ul>
+
+	</div>
+	<div id="tabs-4">
+		<ul class="b-quest-list">
+				<li class="b-quest-list__item">
+					<h3>С какими ОС приходилось сталкиваться? Для каких целей вы их использовали?</h3>
+					<span class="b-quest-list__answ">
+					FreeBSD – для выполнениях небольших задач на стороне сервера по рабочим вопросам (в основном по инструкциям от сисадмина). Поэтому имею представление о консольных командах.<br />
+Ubuntu и iOS – посмотреть, «поиграться». В последнее время для изучения БЭМа.<br />
+ Windows – и дома, и на работе (постоянно).
+
+					</span>
+				</li>
+				<li class="b-quest-list__item">
+					<h3>Приходилось ли вам пользоваться системами контроля версий? </h3>
+					<span class="b-quest-list__answ">Работала с SVN (TortoiseSVN) и GIT (GitHub).<br /> 
+SVN – использую на работе (в проекте <a href="http://www.in-posad.ru">in-posad.ru</a>).<br />
+C GitHub – познакомилась впервые осенью 2011 – в школе верстки Яндекса (Симферополь, 2-ая школа). Тогда работала через консоль, сейчас через приложение для Windows.
+</span>
+				</li>
+
+		</ul>
+	</div>
+	<div id="tabs-5">
+		<ul class="b-quest-list">
+				<li class="b-quest-list__item">
+					<h3>Использовали ли вы системы постановки и ведения задач?</h3>
+					<span class="b-quest-list__answ">
+					Было несколько проб - Eventum Issue. корпоративный портал 1С-Битрикс, сейчас исопльзую Fengo Office.
+					</span>
+				</li>
+		</ul>
+	</div>
+	
+	<div id="tabs-6">
+		<ul class="b-quest-list">
+				<li class="b-quest-list__item">
+					<h3>Какие полезные для фронтенд-разработчика ресурсы вы используете и можете посоветовать?</h3>
+					<span class="b-quest-list__answ">
+					В основном – тематические блоги. А так, конечно, <a href="http://habrhabr.ru">habrhabr.ru</a>, <a href="http://smashingmagazine.com">smashingmagazine.com</a>, <a href="http://css-tricks.com">css-tricks.com</a>, <a href="http://web-standards.ru">web-standards.ru</a>, <a href="http://lea.verou.me">lea.verou.me</a> и много другого. О чем-то новом и интересном быстрее узнаю из twitter.<br />
+В качестве справочной литературы использую <a href="http://htmlbook.ru">htmlbook.ru</a>, <a href="http://jquery.com">jquery.com</a>, <a href="http://jqueryui.com">jqueryui.com</a>, <a href="http://php.net">php.net</a>.<br />
+Из книг – только XSLT от O’reilly.
+
+					</span>
+				</li>
+		</ul>
+	</div>
+	<div id="tabs-7">
+		<ul class="b-quest-list">
+				<li class="b-quest-list__item">
+					<h3>Работали ли вы где-нибудь? Какие у вас были должностные обязанности? Есть ли опыт работы в команде?</h3>
+					<span class="b-quest-list__answ">
+					Работаю в веб-студии, команда из 5 человек. В больших командах опыта работы нет – даже не представляю, лучше это или хуже. <br />
+Так как нас мало, то политика в компании сложилась таким образом, что каждый должен всего знать понемногу из области разработки сайтов, но в чем-то быть специалистом. Специализируюсь на верстке (HTML, CSS), настройке XSL-шаблонов, выполняю не сложные задачи по программированию.<br />
+<a href="http://www.internet-expert.ru/about/staff/">Команда</a> будет очень рада, если попаду в школу, и счастлива, если у меня все получится :)
+
+					</span>
+				</li>
+		</ul>
+	</div>
+	
+	</div>
+</div>
+</div>
+
+	<!--<div class="b-content">
+		<div class="b-menu">
+			<ul class="b-menu-list">
+				<li class="b-menu-list__item"><a href="#" class="b-menu-list__link b-menu-list__current">Личные данные</a></li>
+				<li class="b-menu-list__item"><a href="#" class="b-menu-list__link">Обучение</a></li>
+				<li class="b-menu-list__item"><a href="#" class="b-menu-list__link">О школе РИ</a></li>
+				<li class="b-menu-list__item"><a href="#" class="b-menu-list__link">Стажировка</a></li>
+			</ul>
+		</div>
+		<div class="b-main">
+			<ul class="b-quest-list">
+				<li class="b-quest-list__item">
+					<h3>Фамилия, имя, отчество</h3>
+					<span class="b-quest-list__answ">Лукьянчук Светлана Васильевна	</span>
+				</li>
+				<li class="b-quest-list__item">
+					<h3>Е-mail	</h3>
+					<span class="b-quest-list__answ"">milane_s@mail.ru</span>
+				</li>
+				<li class="b-quest-list__item">
+					<h3>Телефон</h3>
+					<span class="b-quest-list__answ"">8-926-247-45-18	</span>
+				</li>
+				<li class="b-quest-list__item">
+					<h3>Год рождения</h3>
+					<span class="b-quest-list__answ"">1988	</span>
+				</li>
+				<li class="b-quest-list__item">
+					<h3>Город, в котором живёте</h3>
+					<span class="b-quest-list__answ"">Сергиев Посад/Москва</span>
+				</li>
+			</ul>
+		</div>-->
+		<img src="b-body__bg_2.png" alt="Я" class="b-body__bg"/>
+	</div>
+</div>
+
+
+ 
+ 
+
+
+
+</body>
+</html>

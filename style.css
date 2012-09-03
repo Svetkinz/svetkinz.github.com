@@ -61,6 +61,10 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
 table { border-collapse: collapse; border-spacing: 0; }
 td { vertical-align: top; }
 
+
+br {
+margin: 0 0 10px 0;
+}
 .chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; text-align: center; }
 
 .b-ib {
@@ -85,7 +89,7 @@ body {
 .b-body__bg {
 	position: absolute; 
 	top: 0px; 
-	right: -185px;
+	right: -180px;
 }
 
 .b-body {
@@ -178,6 +182,7 @@ body {
 
 .b-nav-list__current {
 	color: #fff;
+	cursor: text; 
 }
 
 .b-action {
@@ -203,7 +208,7 @@ body {
 	height: 190px;
 	position: relative;
 	overflow: hidden;
-	width: 700px;
+	width: 720px;
 }
 
 #slides .slide {
@@ -319,7 +324,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e3e4', end
 	font-size: 0;
 	line-height: 0;
 	background: #F0F2F2;
-	margin: 0 0 40px 0;
 }
 
 
@@ -385,6 +389,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e3e4', end
 	*display:inline;
 	vertical-align: top;
 	padding: 47px 0 20px 50px;
+	width: 440px;
 }
 
 .b-quest-list {
@@ -400,7 +405,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e3e4', end
 .b-quest-list__item h3 {
 	padding-left: 10px;
 	position: relative;
-	margin: 0 0 3px 0;;
+	margin: 0 0 10px 0;
 } 
 
 .b-quest-list__item h3:before {
@@ -411,7 +416,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e3e4', end
 
 .b-quest-list__answ {
 	color: #333;
-	padding-left: 10px;
+	margin-left: 10px;
+	display: block;
 }
 
 
