@@ -49,6 +49,9 @@ $(function () {
 	    $('a[data-slidebutton='+next.data('slide')+']').addClass('activ');
 	    next.hide().addClass('show').fadeIn(1000);
 	    current.fadeOut(1000).removeClass('show');
+	    timer = setTimeout(function () {
+	        Gallery();
+	    }, timeout);
     }, InitSlider = function () {
         elements.hide();
         $('#slides div:first').show();
@@ -61,7 +64,7 @@ $(function () {
     }, StopSlider = function () {
         clearInterval(timer);
     }, StartSlider = function () {
-        timer = setInterval(function () {
+        timer = setTimeout(function () {
 		    Gallery();
 		}, timeout);
     }, SetSlide = function (number) {
@@ -80,6 +83,7 @@ $(function () {
         StartSlider();
     }
 });
+
 
 </script>
 
@@ -192,7 +196,7 @@ $(function () {
 								</span><span class="b-quest-list__answ">
 								А дальше пошло-поехало, практически в каждом проекте, указанном в <a href="http://www.internet-expert.ru/portfolio/">портфолио веб-студии</a>, я принимала участие. Какие-то проекты были полностью разработаны мной, в каких-то выступала только верстальщиком или программистом.
 								</span><span class="b-quest-list__answ">
-								Из последнего:</span><span class="b-quest-list__answ">
+								Из последнего (нет в портфолио):</span><span class="b-quest-list__answ">
 								<a href="http://www.solba.ru">Solba.ru</a> – верстка макетов, интеграция с HostCMS (php), верстка xsl-шаблонов.
 								</span><span class="b-quest-list__answ">
 								<a href="http://www.wifimag.ru">Wifimag.ru</a> – верстка макетов, верстка шаблонов блоков на 1С-Битрикс (PHP).

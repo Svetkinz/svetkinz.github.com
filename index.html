@@ -49,6 +49,9 @@ $(function () {
 	    $('a[data-slidebutton='+next.data('slide')+']').addClass('activ');
 	    next.hide().addClass('show').fadeIn(1000);
 	    current.fadeOut(1000).removeClass('show');
+	    timer = setTimeout(function () {
+	        Gallery();
+	    }, timeout);
     }, InitSlider = function () {
         elements.hide();
         $('#slides div:first').show();
@@ -61,7 +64,7 @@ $(function () {
     }, StopSlider = function () {
         clearInterval(timer);
     }, StartSlider = function () {
-        timer = setInterval(function () {
+        timer = setTimeout(function () {
 		    Gallery();
 		}, timeout);
     }, SetSlide = function (number) {
