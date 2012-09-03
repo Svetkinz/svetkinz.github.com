@@ -196,7 +196,7 @@ body {
 	background: linear-gradient(to right,  #e0e3e4 0%,#ffffff 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e3e4', endColorstr='#ffffff',GradientType=1 );
 	padding: 25px 0 0 60px;
-	width: 960px;
+	width: 900px;
 }
 
 #slides {
