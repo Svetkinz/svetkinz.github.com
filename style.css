@@ -262,7 +262,7 @@ h3 {
 
 .b-quest-list__answ {
 	color: #333;
-	margin-left: 10px;
+	margin: 0 0 8px 10px;
 	display: block;
 }
 
